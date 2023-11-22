@@ -4,13 +4,46 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
 body {
   font-family: "Young serif";
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+}
+
+.toggle:focus {
+  outline: none;
 }
