@@ -73,7 +73,7 @@ function setTime() {
     360
   )}deg)`;
 
-  timeEl.innerHTML = `${hoursForClock}: ${
+  timeEl.innerHTML = `${hoursForClock} : ${
     minutes < 10 ? `0${minutes}` : minutes
   } ${ampm}`;
 
