@@ -3,8 +3,39 @@ const minuteEl = document.querySelector(".minute");
 const secondEl = document.querySelector(".second");
 const timeEl = document.querySelector(".time");
 const dateEl = document.querySelector(".date");
-const toogleEl = document.querySelector(".toogle");
+const toggleEl = document.querySelector(".toggle");
 
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+toggleEl.addEventListener("click", (e) => {
+  const html = document.querySelector("html");
+  if (html.classList.contains("dark")) {
+    html.classList.remove("dark");
+    e.target.value = "Dark-Mode";
+  } else {
+    html.classList.add("dark");
+    e.target.value = "Light-Mode";
+  }
+});
