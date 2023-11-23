@@ -44,10 +44,11 @@ function setTime() {
   const time = new Date();
   const month = time.getMonth();
   const day = time.getDay();
-  const hour = time.getHours();
-  const hoursForClock = hour % 12;
+  const hours = time.getHours();
+  const hoursForClock = hours >= 13 ? hours % 12 : hours;
   const minutes = time.getMinutes();
   const seconds = time.getSeconds();
+  const ampm = hoursForClock >= 12 ? "PM" : "AM";
 
   hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     hoursForClock,
@@ -70,6 +71,10 @@ function setTime() {
     0,
     360
   )}deg)`;
+
+  timeEl.innerHTML = `${hoursForClock}: ${
+    minutes < 10 ? `0${minutes}` : minutes
+  } ${ampm}`;
 }
 
 // StackOverflow https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
