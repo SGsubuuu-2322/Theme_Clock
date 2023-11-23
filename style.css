@@ -106,3 +106,28 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
+.time {
+  font-size: 60px;
+}
+
+.date {
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.date .circle {
+  height: 18px;
+  width: 18px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 18px;
+  font-size: 12px;
+  transition: all 0.4s ease-in;
+}
