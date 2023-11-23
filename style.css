@@ -50,9 +50,9 @@ body {
 
 .clock-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
 }
 
 .clock {
@@ -60,4 +60,8 @@ body {
   height: 200px;
   width: 200px;
   background-color: #f0f0f0;
+}
+
+.neddle{
+  
 }
