@@ -1,3 +1,5 @@
+/* This is the styling sheet for this project written in CSS3 technology...  */
+/* This is some general stylings for the whole project... */
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 
 * {
@@ -9,6 +11,7 @@
   --secondary-color: #fff;
 }
 
+/* This is for color variables in the dark and light mode... */
 html.dark {
   --primary-color: #fff;
   --secondary-color: #333;
@@ -33,6 +36,7 @@ body {
   margin: 0;
 }
 
+/* This is for toggle button... */
 .toggle {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -48,6 +52,7 @@ body {
   outline: none;
 }
 
+/* This is for parent clock container... */
 .clock-container {
   display: flex;
   flex-direction: column;
@@ -55,6 +60,7 @@ body {
   align-items: center;
 }
 
+/* This is for clock container.... */
 .clock {
   position: relative;
   height: 200px;
@@ -62,6 +68,7 @@ body {
   /* background-color: #f0f0f0; */
 }
 
+/* This is some general stylings for the needles of the clock */
 .needle {
   background-color: var(--primary-color);
   position: absolute;
@@ -73,19 +80,25 @@ body {
   transition: all 0.5s ease-in;
 }
 
+/* This is for hour needle  */
 .needle.hour {
   transform: translate(-50%, -100%) rotate(0deg);
 }
+
+/* This is for minute needle  */
 .needle.minute {
   transform: translate(-50%, -100%) rotate(10deg);
   height: 100px;
 }
+
+/* This is for second needle  */
 .needle.second {
   transform: translate(-50%, -100%) rotate(30deg);
   height: 100px;
   background-color: #e7347c;
 }
 
+/* This is for center point */
 .center-point {
   height: 10px;
   width: 10px;
@@ -96,6 +109,8 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
+/* This is for mini circle in the clock center   */
 .center-point::after {
   content: "";
   height: 5px;
@@ -108,10 +123,12 @@ body {
   border-radius: 50%;
 }
 
+/* This is for time face*/
 .time {
   font-size: 60px;
 }
 
+/* This is for date face */
 .date {
   color: #aaa;
   text-transform: uppercase;
@@ -119,6 +136,7 @@ body {
   letter-spacing: 0.3px;
 }
 
+/* This is for date circle... */
 .date .circle {
   height: 18px;
   width: 18px;
